@@ -76,6 +76,7 @@ if ("`tholdvar'"!="") local Z `tholdvar'
 		gen all=1
 		groupfunction [aw=`weight'], mean(fgt0_*) by(all)
 		reshape long fgt0_, i(all) j(year)
+		gen pthru = `passthru'
 	}
 	
 }
